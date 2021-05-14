@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {View, Text, StyleSheet, TextInput, Button} from 'react-native';
 import {connect} from 'react-redux';
 
-import {editEmail, editPass} from '../actions/AuthActions';
+import {editEmail, editPass, handleLogin} from '../actions/AuthActions';
 
 export class Register extends Component{
 	render(){
@@ -14,7 +14,7 @@ export class Register extends Component{
 				<Text>Senha:</Text>
 				<TextInput value={this.props.pass} secureTextEntry={true} style={styles.input} onChangeText={(txt) => this.props.editPass(txt)} />
 
-				<Button title="Entrar" onPress={this.handleLogin} />
+				<Button title="Entrar" onPress={() => this.props.handleLogin(this.props.email, this.props.pass)} />
 			</View>
 		);
 	}
@@ -39,6 +39,6 @@ const mapStateToProps = (state) => {
 	};
 };
 
-const RegisterConnect = connect(mapStateToProps, {editEmail, editPass})(Register);
+const RegisterConnect = connect(mapStateToProps, {editEmail, editPass, handleLogin})(Register);
 
 export default RegisterConnect;

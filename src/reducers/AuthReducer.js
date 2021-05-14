@@ -17,6 +17,18 @@ const AuthReducer = (state = [], action) => {
 		return{...state, pass: action.payload.pass};
 	}
 
+	if(action.type == 'successRegister'){
+		alert('Usuário cadastrado com sucesso!');
+
+		return state;
+	}
+
+	if(action.type == 'errorRegister'){
+		alert('Erro: '+action.payload.code);
+
+		return state;
+	}
+
 	return state;
 };
 
