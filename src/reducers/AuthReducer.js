@@ -1,6 +1,6 @@
 const initialState = {
-	email: 'gleite98@gmail.com',
-	pass: '123456'
+	email: '',
+	pass: ''
 };
 
 const AuthReducer = (state = [], action) => {

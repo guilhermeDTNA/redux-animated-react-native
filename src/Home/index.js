@@ -51,7 +51,22 @@ const styles = StyleSheet.create({
 	},
 	title:{
 		fontSize: 30,
-		backgroundColor: 'transparent'
+		backgroundColor: 'transparent',
+		paddingBottom: 40
+	},
+	button:{
+		width: 200,
+		height: 50,
+		
+		alignItems: 'center',
+		justifyContent: 'center',
+
+		backgroundColor: '#16E07F',
+		margin: 10
+	},
+	btnText:{
+		fontSize: 20,
+		color: 'white'
 	}
 });
 
