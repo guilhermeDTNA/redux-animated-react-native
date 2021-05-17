@@ -12,6 +12,7 @@ import Reducers from './src/Reducers';
 import Home from './src/Home';
 import Login from './src/Login';
 import Register from './src/Register';
+import Animations from './src/Animations';
 
 let store = createStore(Reducers, applyMiddleware(ReduxThunk));
 
@@ -24,6 +25,9 @@ const Navigator = createStackNavigator({
   },
   Login:{
     screen: Login
+  },
+  Animations:{
+    screen: Animations
   }
 });
 

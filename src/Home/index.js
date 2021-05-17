@@ -10,10 +10,10 @@ export class Home extends Component{
 
 	constructor(props){
 		super(props);
-		this.state = {};
-
+		
 		this.handleRegister = this.handleRegister.bind(this);
 		this.handleLogin = this.handleLogin.bind(this);
+		this.handleAnimations = this.handleAnimations.bind(this);
 	}
 
 	handleRegister(){
@@ -22,6 +22,10 @@ export class Home extends Component{
 
 	handleLogin(){
 		this.props.navigation.navigate('Login');
+	}
+
+	handleAnimations(){
+		this.props.navigation.navigate('Animations');
 	}
 
 	render(){
@@ -36,6 +40,10 @@ export class Home extends Component{
 
 					<TouchableHighlight underlayColor="#CCCCCC" style={styles.button} onPress={this.handleLogin}>
 						<Text style={styles.btnText}>Login</Text>
+					</TouchableHighlight>
+
+					<TouchableHighlight underlayColor="#CCCCCC" style={styles.button} onPress={this.handleAnimations}>
+						<Text style={styles.btnText}>Animações</Text>
 					</TouchableHighlight>
 				</View>
 			</View>
